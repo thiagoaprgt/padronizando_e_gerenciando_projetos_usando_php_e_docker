@@ -1,0 +1,53 @@
+# portas "porta do máquina (host)":"porta do container" 
+# volumes "pasta da máquina (host)":"pasta dentro do container"
+# pasta padrão do nginx /usr/share/nginx/html
+#wording_dir ja direciona para a pasta descrita ao entrar no container
+
+version: '3.1'
+
+services:
+
+  application:
+    build:
+      context: ./ 
+      dockerfile: Dockerfile     
+    image:
+    container_name: application-thiago
+    working_dir: /var/www/html
+    volumes: 
+      - ./:/var/www/html 
+    networks:
+      - app
+
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: nginx-thiago
+    ports:
+      - 8000:80
+    volumes:
+      - ./docker-compose/nginx:etc/nginx/conf.d
+    networks:
+      - app
+
+  php:
+    image: php:8.1.12-apache
+    container_name: php-thiago
+    ports:
+      - 9000:80
+    working_dir: /var/www/html
+    volumes: 
+      - ./:/var/www/html  
+
+  composer:
+    image: composer:2.4.4
+    working_dir: /app
+    volumes:
+      - ./:/app  
+
+  db:
+    image: mariadb   
+    container_name: mariadb-thiago
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: senha
+  
