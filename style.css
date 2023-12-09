@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;  
+    justify-content: center;      
+    font-size: 15pt;   
+    
+   
+    
+
+}
+
+
+.folder {
+    margin-bottom: 20px;
+}
