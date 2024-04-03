@@ -8,7 +8,7 @@ create table formulario (
 
     id int(5) primary key not null auto_increment,
     name varchar(30),
-    number int(11),
+    number bigint(11),
     email varchar(100),
 	data_cadastro date
 );
