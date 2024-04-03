@@ -10,7 +10,7 @@ $path =  __DIR__ . '/class/' . $_GET["class"] . ".php";
 
 require_once $path;
 
-call_user_func_array(array($_GET["class"], $_GET["method"]), $_POST);
+call_user_func_array(array($_GET["class"], $_GET["method"]), [$_POST]);
 
 
 //$index = __DIR__ . "/index.php";

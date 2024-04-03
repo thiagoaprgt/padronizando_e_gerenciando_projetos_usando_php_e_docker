@@ -47,6 +47,8 @@ class downloadPdf {
             )            
         ";     
 
+        $query = $conn->query($sql); 
+
         $conn = null; 
         
         return downloadPdf::directDownloadPdf($data);
