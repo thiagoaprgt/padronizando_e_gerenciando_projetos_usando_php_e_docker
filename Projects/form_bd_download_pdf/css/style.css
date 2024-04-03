@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 100vh;
+}
+
+
+form, #downloadPdf {    
+    width: 500px;
+    padding: 20px;
+     
+    border: solid 2px black;
+    border-radius: 5px;
+
+
+}
+
+a {
+   text-align: center;
+
+}
+
+

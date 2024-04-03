@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
     <title>Cadastro para liberar o download do pdf</title>
 </head>
 <body>
-    <form action="saveData" method="post">
+    
+    <form action="service.php/?class=downloadPdf&method=saveForm" method="post">
             
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Nome:</label>
-            <input type="text" name="name" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Digite seu nome.">
         </div>
 
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">WhatsApp:</label>
-            <input type="text" name="cellphone" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+            <input type="text" name="cellphone" class="form-control" id="number" placeholder="Digite o número do seu whats app.">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email:</label>
-            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" name="email" class="form-control" id="email" placeholder="exemplo@exemplo.com">
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="submit" class="btn btn-primary">Cadastrar e baixar o pdf</button>
     
 
     </form>
