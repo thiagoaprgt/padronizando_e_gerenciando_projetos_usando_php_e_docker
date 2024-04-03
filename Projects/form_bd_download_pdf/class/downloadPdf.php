@@ -49,7 +49,7 @@ class downloadPdf {
 
         $conn = null; 
         
-        return downloadPdf::downloadPdfScreen($data);
+        return downloadPdf::directDownloadPdf($data);
 
     }
 
@@ -91,7 +91,7 @@ class downloadPdf {
 
     public function downloadPdfScreen(Array $obj) {
 
-        downloadPdf::directDownloadPdf();
+        //downloadPdf::directDownloadPdf();
 
         $content = file_get_contents(__DIR__ . "/../views/downloadPdf.html");
 
