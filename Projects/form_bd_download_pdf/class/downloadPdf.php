@@ -90,8 +90,7 @@ class downloadPdf {
 
 
     public function downloadPdfScreen(Array $obj) {
-
-        //downloadPdf::directDownloadPdf();
+        
 
         $content = file_get_contents(__DIR__ . "/../views/downloadPdf.html");
 
